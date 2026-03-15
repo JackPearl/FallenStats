@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('assets/fonts/Roboto-Variable-Font.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+:root {
+    --bgPage: linear-gradient(to right, #050505 0%, #0d141d 25%, #152331 100%);
+    --bgNav: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+    --accentColor: linear-gradient(90deg, rgba(237, 198, 48, 1) 0%, rgba(205, 203, 59, 1) 50%, rgba(181, 153, 45, 1) 100%);
+    --text-light: #E6E6FA;
+    --bronze: radial-gradient(circle, rgba(210, 152, 99, 1) 0%, rgba(201, 128, 66, 1) 50%, rgba(133, 73, 26, 1) 100%);
+}
+
+body {
+    background: var(--bgPage);
+}
+
+/* Navigation Bar */
+.navbar {
+    background: var(--bgNav);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    backdrop-filter: blur(10px);
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo {
+    font-family: 'Roboto', Wingdings;
+    font-size: 36px;
+    font-weight: bold;
+    background: var(--accentColor);
+    background-clip: text;
+    /* -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    color: transparent;
+    letter-spacing: 4px;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+    flex-shrink: 0;
+}
+
+.logo:hover {
+    opacity: 0.8;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-light);
+    font-weight: 700;
+    font-size: 24px;
+    transition: color 0.3s ease;
+    letter-spacing: 1px;
+}
+
+.nav-links a:hover {
+    background: var(--accentColor);
+    background-clip: text;
+}
